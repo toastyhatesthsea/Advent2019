@@ -48,10 +48,10 @@ public class IntCode {
             int total = 0;
 
             if (opCode == 1) {
-                total = aList.get(firstUnit) * aList.get(secondUnit);
+                total = aList.get(firstUnit) + aList.get(secondUnit);
                 aList.set(location, total);
             } else if (opCode == 2) {
-                total = aList.get(firstUnit) + aList.get(secondUnit);
+                total = aList.get(firstUnit) * aList.get(secondUnit);
                 aList.set(location, total);
             }
 
@@ -70,9 +70,12 @@ class Testers {
         //List<String> stringList = Arrays.asList(arrays);
 
         //Integer[] aList = {1, 1, 1, 4, 99, 5, 6, 0, 99};
+        //Integer[] test2 = {1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50};
+        //List<Integer> test2List = Arrays.asList(test2);
         //List<Integer> aListers = Arrays.asList(aList);
 
-        aCode.process(aListers);
+        //aCode.process(test2List);
+        aCode.process(aCode.aList);
 
     }
 }
